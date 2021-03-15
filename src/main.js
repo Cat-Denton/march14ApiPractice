@@ -16,14 +16,15 @@ $(document).ready(function() {
         const response = JSON.parse(this.responseText);
         getElements(response);
       }
-    }
+    };
 
     request.open("GET", url, true);
     request.send();
 
-   function getElements(response) {
+    function getElements(response) {
       $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
-      $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+      $('.showTemp').text(`The temperature in Fahrenheit is ${((response.main.temp-273)*9/5+32).toFixed(0)} degrees.`);
+      $('.showForecast').text(`The current weather is ${response.weather[0].description}`)
     }
   });
 });

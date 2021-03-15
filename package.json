@@ -2,7 +2,7 @@
   "name": "jsenvtemplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --mode=development",
     "start": "npm run build & webpack-dev-server --open --mode development",
@@ -25,7 +25,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
-    "dotenv-webpack": "^7.0.1",
+    "dotenv-webpack": "^2.0.0",
     "eslint": "^6.3.0",
     "eslint-loader": "^3.0.0",
     "file-loader": "^1.1.6",
